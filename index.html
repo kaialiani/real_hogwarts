@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Studentbase</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Hogwarts register</h1>
+    <div id="filter-buttons">
+      <button
+        class="filterRavenclaw"
+        data-action="filter"
+        data-filter="Ravenclaw"
+      >
+        Ravenclaw
+      </button>
+      <button
+        class="filterGryffindor"
+        data-action="filter"
+        data-filter="Gryffindor"
+      >
+        Gryffindor
+      </button>
+      <button
+        class="filterHufflepuff"
+        data-action="filter"
+        data-filter="Hufflepuff"
+      >
+        Hufflepuff
+      </button>
+      <button
+        class="filterSlytherin"
+        data-action="filter"
+        data-filter="Slytherin"
+      >
+        Slytherin
+      </button>
+      <button class="filter" data-action="filter" data-filter="prefect">
+        Prefect
+      </button>
+      <button class="filter" data-action="filter" data-filter="*">ALL</button>
+    </div>
+
+    <hr />
+
+    <div id="big-container">
+      <div id="student-list" class="scroll">
+        <table id="list">
+          <thead>
+            <tr id="sorting">
+              <th
+                data-action="sort"
+                data-sort-direction="asc"
+                data-sort="prefect"
+              >
+                Prefect
+              </th>
+              <th
+                data-action="sort"
+                data-sort-direction="asc"
+                data-sort="inqSquad"
+              >
+                Inq. Squad
+              </th>
+
+              <th data-action="sort" data-sort-direction="asc" data-sort="name">
+                Name
+              </th>
+
+              <th data-action="sort" data-sort-direction="asc" data-sort="name">
+                Last name
+              </th>
+              <th
+                data-action="sort"
+                data-sort-direction="asc"
+                data-sort="house"
+              >
+                House
+              </th>
+            </tr>
+          </thead>
+          <tbody id="student-rows">
+            <!-- student template here -->
+          </tbody>
+        </table>
+
+        <template id="student">
+          <tr>
+            <td data-field="prefect">☆</td>
+            <td data-field="inqSquad">☆</td>
+            <td data-field="name">NAME</td>
+            <td data-field="lastName">lastName</td>
+            <td data-field="house">House</td>
+          </tr>
+        </template>
+      </div>
+
+      <div id="student-popup">
+        <div id="student-popup-header"></div>
+        <br />
+        <div id="student-popup-content">
+          <div>
+            <img id="student-photo" src="" alt="Student Photo" />
+          </div>
+          <div>
+            <p id="student-house"></p>
+            <p id="student-blood-status"></p>
+            <p id="student-prefect"></p>
+            <p id="student-expelled"></p>
+            <p id="student-inquisitorial-squad"></p>
+            <button id="remove-student-btn">Expell student</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

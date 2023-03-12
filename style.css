@@ -1,0 +1,117 @@
+body {
+    overflow: hidden;
+    background-color: #19212A;
+    color: #dddddd;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+[data-action] {
+  cursor: pointer;
+}
+
+th {
+    text-align:left;
+    padding-bottom: 15px;
+}
+
+#sorting th.sortby {
+  text-decoration: underline;
+}
+
+#sorting th.sortby[data-sort-direction="asc"]::after {
+  content: "⇓";
+}
+
+#sorting th.sortby[data-sort-direction="lastName"]::after {
+  content: "⇑";
+}
+
+#list {
+  color: #dddddd;
+}
+
+#list tbody tr td {
+  padding: 4px;
+}
+
+
+img.houseimg {
+  width: 60px;
+  height: 60px;
+}
+
+#student-popup {
+  flex-basis: 50%;
+  border: 3px solid;
+  background-color: #131414;
+  color: #dddddd;
+  padding: 60px;
+}
+
+#student-popup-header {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+#big-container {
+    display: flex;
+    width: 95%;
+    margin: auto;
+    gap: 2%;
+    margin-top: 20px;
+}
+
+#list {
+    width: 100%;
+    font-size: 18px;
+}
+
+
+#student-list {
+    cursor: pointer;
+    color: #000000;
+    flex-basis: 70%;
+}
+
+#student-popup-content {
+    display: flex;
+    gap: 8%;
+    font-size: 22px;
+}
+
+.scroll {
+    height: 500px;
+    overflow: auto;
+}
+
+.name {
+    font-size: 24px;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: medium;
+    color: #dddddd;
+    background-color: #00000000;
+    border: 1.5px solid;
+    border-radius: 50px;
+
+}
+
+button img {
+    width: 60px;
+}
+
+#filter-buttons {
+    display: flex;
+    gap: 1%;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    text-align: center;
+    
+}
